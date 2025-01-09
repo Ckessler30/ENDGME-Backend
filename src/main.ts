@@ -7,5 +7,6 @@ async function bootstrap() {
     logger: winstonLoggerConfig,
   });
   await app.listen(process.env.PORT ?? 3000);
+  app.enableCors();
 }
 bootstrap();

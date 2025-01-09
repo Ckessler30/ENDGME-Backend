@@ -7,6 +7,11 @@ export class AppController {
 
   @Get()
   getHello(): string {
-    return this.appService.getHello();
+    return this.appService.getTroll();
+  }
+
+  @Get('health')
+  healthCheck() {
+    return { status: 'OK', timestamp: new Date().toISOString() };
   }
 }
